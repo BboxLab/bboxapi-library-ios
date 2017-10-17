@@ -1,0 +1,124 @@
+//
+//  BboxRestClient.h
+//  BboxApi
+//
+//  Created by Aiman on 16/10/2017.
+//  Copyright © 2017 Bouygues. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
+
+/**
+ BbowRestClient is just an abstraction of the AFNetworking library. The base url is set to directly communicate with the Bbox API.
+ */
+@interface BboxRestClient : NSObject
+
+/**
+ Ip of the Bbox we want to communicate with.
+ */
+@property NSString * ip;
+
+@property NSString * baseUrl;
+
+@property AFHTTPSessionManager * manager;
+
+/**
+ Init the BboxRestClient with the bbox ip.
+ @param ip The ip of the Bbox we want to communicate with
+ @return an instance of BboxRestClient
+ */
+- (id)init:(NSString *)ip;
+
+/**
+ HTTP Get method.
+ @param url The resource you want to get ex: 'applications'
+ @param params url parameters
+ @param header url header parameters
+ @param callback you will get the response in it.
+ */
+- (void) get:(NSString *)url withParams:(NSDictionary *)params withHeader:(NSDictionary *)header thenCall:(void (^)(BOOL, NSInteger, id, NSError *))callback;
+
+
+/**
+ HTTP Get method.
+ @param url The resource you want to get ex: 'applications'
+ @param params url parameters
+ @param callback you will get the response in it.
+ */
+- (void) get:(NSString*)url withParams:(NSDictionary*)params thenCall:(void (^)(BOOL success, NSInteger statusCode, id response, NSError *error))callback;
+
+/**
+ HTTP Post method.
+ @param url The resource you want to post to ex: 'applications/register'
+ @param body body of the request
+ @param header url header parameters
+ @param callback you will get the response in it.
+ */
+- (void) post:(NSString *)url withBody:(NSDictionary *)body withHeader:(NSDictionary *)header thenCall:(void (^)(BOOL, NSInteger, id, NSError *))callback;
+
+/**
+ HTTP Post method.
+ @param url The resource you want to post to ex: 'applications/register'
+ @param body body of the request
+ @param callback you will get the response in it.
+ */
+- (void) post:(NSString*)url withBody:(NSDictionary*)body thenCall:(void (^)(BOOL success, NSInteger statusCode, id response, NSError *error))callback;
+
+
+/**
+ HTTP Post method. The callback provides a NSDictionary of the reponses's headers.
+ @param url The resource you want to post to ex: 'applications/register'
+ @param body body of the request
+ @param header url header parameters
+ @param callback you will get the response in it.
+ */
+- (void)post:(NSString *)url withBody:(NSDictionary *)body  withHeader:(NSDictionary *)header thenCallWithHeaders:(void (^)(BOOL, NSInteger, NSDictionary *, id, NSError *))callback;
+
+
+/**
+ HTTP Post method. The callback provides a NSDictionary of the reponses's headers.
+ @param url The resource you want to post to ex: 'applications/register'
+ @param body body of the request
+ @param callback you will get the response in it.
+ */
+- (void) post:(NSString*)url withBody:(NSDictionary*)body thenCallWithHeaders:(void (^)(BOOL success, NSInteger statusCode, NSDictionary* headers, id response, NSError *error))callback;
+
+/**
+ HTTP Put method.
+ @param url The resource you want to put to ex: '/notification/a_channel_id'
+ @param body body of the request
+ @param header url header parameters
+ @param callback you will get the response in it.
+ */
+- (void) put:(NSString*)url withBody:(NSDictionary*)body withHeader:(NSDictionary *)header thenCall:(void (^)(BOOL success, NSInteger statusCode, id response, NSError *error))callback;
+
+
+/**
+ HTTP Put method.
+ @param url The resource you want to put to ex: '/notification/a_channel_id'
+ @param body body of the request
+ @param callback you will get the response in it.
+ */
+- (void) put:(NSString*)url withBody:(NSDictionary*)body thenCall:(void (^)(BOOL success, NSInteger statusCode, id response, NSError *error))callback;
+
+
+/**
+ HTTP Delete method.
+ @param url The resource you want to delete ex: '/applications/run/an_app_id'
+ @param params url parameters
+ @param header url header parameters
+ @param callback you will get the response in it.
+ */
+- (void) del:(NSString*)url withParams:(NSDictionary*)params withHeader:(NSDictionary *)header  thenCall:(void (^)(BOOL success, NSInteger statusCode, id response, NSError *error))callback;
+
+
+/**
+ HTTP Delete method.
+ @param url The resource you want to delete ex: '/applications/run/an_app_id'
+ @param params url parameters
+ @param callback you will get the response in it.
+ */
+- (void) del:(NSString*)url withParams:(NSDictionary*)params thenCall:(void (^)(BOOL success, NSInteger statusCode, id response, NSError *error))callback;
+
+@end

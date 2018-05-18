@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "BboxApi"
-s.version      = "0.1"
+s.version      = "0.1.1"
 s.summary      = "Library Bbox Miami"
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ s.summary      = "Library Bbox Miami"
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 s.description  = "A library for the Bbox Miami"
 
-s.homepage     = "https://dev.bouyguestelecom.fr/dev/"
+s.homepage     = "https://dev.bouyguestelecom.fr"
 # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -78,7 +78,7 @@ s.ios.deployment_target = "9.0"
 #  Supports git, hg, bzr, svn and HTTP.
 #
 
-s.source       = { :git => "https://github.com/BboxLab/bboxapi-client-ios.git", :tag => "#{s.version}" }
+s.source       = { :git => "https://github.com/BboxLab/bboxapi-library-ios.git", :tag => "#{s.version}" }
 
 
 # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

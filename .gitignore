@@ -52,11 +52,7 @@ Carthage/Build
 
 fastlane/report.xml
 fastlane/Preview.html
-<<<<<<< HEAD
 fastlane/screenshots
-=======
-fastlane/screenshots/**/*.png
->>>>>>> 894d78174fac6bdb20e1777270d2a918de5fe6c3
 fastlane/test_output
 
 # Code Injection

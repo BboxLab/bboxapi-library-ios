@@ -1,4 +1,3 @@
-==================
 The iOs library is built to easily use the BboxAPI of the new Bbox Miami.
 
 Cocoadoc: http://cocoadocs.org/docsets/BboxApi/0.1/
@@ -27,7 +26,5 @@ target '<Your Target Name>' do
 end
 ```
 
-
-=======
-# bboxapi-library-ios
-This is the basic SDK for your own application if you want to make use of BboxAPI services from Bbox Miami. Don't forget to ask credentials (AppID/AppSecret) via https://dev.bouyguestelecom.fr/dev/?page_id=51
+## bboxapi-library-ios
+This is the basic SDK for your own application if you want to make use of BboxAPI services from Bbox Miami. Don't forget to ask credentials (AppID/AppSecret) via https://dev.bouyguestelecom.fr/

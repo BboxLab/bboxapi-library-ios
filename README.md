@@ -1,6 +1,6 @@
 The iOs library is built to easily use the BboxAPI of the new Bbox Miami.
 
-Cocoadoc: http://cocoadocs.org/docsets/BboxApi/0.1/
+Cocoadoc: https://cocoapods.org/pods/BboxApi
 
 ## Installation
 
